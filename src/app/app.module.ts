@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { SourceComponent } from './source/source.component';
 import { SourceService } from './source/source.service';
 import { HttpModule } from '@angular/http';
+import { ArticleService } from './article/article.service';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpModule } from '@angular/http';
     HttpModule
   ],
   providers: [
-    SourceService
+    SourceService,
+    ArticleService
   ],
   bootstrap: [AppComponent]
 })
