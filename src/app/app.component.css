@@ -5,6 +5,10 @@
     text-transform: uppercase;
 }
 
+.navbar-brand {
+    color: ivory;
+}
+
 .nav-item a{
     color: ivory;
 }

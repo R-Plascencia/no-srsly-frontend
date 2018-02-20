@@ -5,7 +5,7 @@
         <!-- <img src="../../assets/images/brain.jpg" height="100" width="100"> -->
         <br><br>
         <h1 class="display-2">
-            Our Sources
+            Srsly by source
         </h1>
         <br><br>
       </div>
@@ -17,14 +17,38 @@
   <div class="row justify-content-start">
     <div class="col-4">
       <div class="list-group list-group-flush">
-          <a href="#" class="list-group-item list-group-item-action active">
-            Cras justo odio
+          <a href="javascript:void(0)" class="list-group-item list-group-item-action" [ngClass]="{'active' : source?.id === currTab}" (click)="setCurrTab(source?.id); showSource(source?.id)" *ngFor="let source of sources">
+            {{ source?.name }}
           </a>
         </div>
     </div>
-    <div class="col-4">
-      ARTICLES GO HERE
+
+    <div class="col-7">
+      <!-- <i class="fas fa-circle-notch fa-spin fa-5x text-center" *ngIf="showSpinner"></i> -->
+      <ul class="list-unstyled">
+        <li class="media" *ngFor="let s of currSource?.articles" style="margin-bottom:20px;">
+          <img *ngIf="s?.top_img != null" class="mr-3" src="{{ s?.top_img }}" alt="Generic image" height="72" width="72">
+          <img *ngIf="s?.top_img === null" class="mr-3" src="../../assets/images/newspaper-def.jpg" alt="Replaced image" height="72" width="72">
+
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">
+              <a href="{{ s?.url }}" target="_blank">
+                {{ s?.title }}
+              </a> 
+            </h5>
+            {{ s?.summary }}
+            <small id="passwordHelpBlock" class="form-text text-muted">
+              {{ s?.pub_date | date }}
+            </small>
+          </div>
+
+        </li>
+        <span *ngIf="currSource?.articles.length === 0">
+          Nothing yet! Check back later
+        </span>
+      </ul>
     </div>
+
   </div>
 </div>
 
