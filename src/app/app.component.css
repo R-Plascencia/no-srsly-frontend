@@ -8,3 +8,20 @@
 .nav-item a{
     color: ivory;
 }
+
+/* .footer {
+	background-color: #73098dfd;
+	color: ivory;
+    padding: 30px;
+    margin: 10px 0;
+} */
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    margin: auto;
+    background-color: #73098dfd;
+    color: ivory;
+}

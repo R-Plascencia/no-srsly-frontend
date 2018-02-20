@@ -1,6 +1,6 @@
 #upper-portion {
-    height: 60vh;
-    min-height: 60vh;
+    height: 50vh;
+    min-height: 50vh;
     /* background-color:#20c997; */
     background-color:#73098dfd;
     color: ivory;
@@ -15,3 +15,11 @@
     padding-left: 20%;
     padding-right: 20%;
 }
+
+#main-results {
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
