@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+#upper-portion {
+    height: 50vh;
+    min-height: 50vh;
+    /* background-color:#20c997; */
+    background-color:#73098dfd;
+    color: ivory;
+    font-weight: 800;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+}
