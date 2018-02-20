@@ -1,0 +1,10 @@
+.navbar {
+    background-color: #73098dfd;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-item a{
+    color: ivory;
+}
