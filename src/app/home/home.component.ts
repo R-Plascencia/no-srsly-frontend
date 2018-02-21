@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
 export class HomeComponent implements OnInit {
   results: Article[] = [];
   showSpinner: boolean = false;
+  searched: boolean = false;
 
   constructor(
     private articleService: ArticleService
@@ -22,10 +23,11 @@ export class HomeComponent implements OnInit {
   getArticlesFromKeywords(form: NgForm) {
     this.showSpinner = true;
     console.log(form.value);
-
+    this.searched = true;
+    
     this.articleService.getArticlesByKeywords(form.value)
       .subscribe(result => this.results = result);
-      
+
     this.showSpinner = false;
   }
 

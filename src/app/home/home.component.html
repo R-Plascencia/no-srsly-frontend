@@ -22,9 +22,16 @@
 <div class="container-fluid" id="main-results">
 
   <div class="container">
-    <div class="text-center" *ngIf="results.length === 0">
+    <div class="text-center" *ngIf="results.length === 0 && !searched">
       <i class="fas fa-arrow-up"></i>
-      <b>ENTER SOME KEYWORDS AND GET SRS!</b>
+      <b class="home-tip">ENTER SOME KEYWORDS AND GET SRS!</b>
+    </div>
+
+    <div class="text-center" *ngIf="results.length === 0 && searched">
+      <div class="alert alert-warning" role="alert">
+        <i class="fas fa-exclamation-circle"></i>
+        <b class="home-tip">No results were found. Try some new keywords!</b>
+      </div>
     </div>
 
     <div class="text-center" *ngIf="showSpinner">
