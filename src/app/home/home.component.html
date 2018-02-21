@@ -22,6 +22,15 @@
 <div class="container-fluid" id="main-results">
 
   <div class="container">
+    <div class="text-center" *ngIf="results.length === 0">
+      <i class="fas fa-arrow-up"></i>
+      <b>ENTER SOME KEYWORDS AND GET SRS!</b>
+    </div>
+
+    <div class="text-center" *ngIf="showSpinner">
+      <i class="fas fa-circle-notch fa-spin fa-5x text-center"></i>
+    </div>
+    
     <ul class="list-unstyled">
       <li class="media" *ngFor="let article of results" id="keyword-result">
         <img *ngIf="article?.top_img != null" class="mr-3" src="{{ article?.top_img }}" alt="Generic image" height="72" width="72">

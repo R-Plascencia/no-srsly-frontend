@@ -9,3 +9,26 @@
     font-family: Montserrat, sans-serif;
     text-transform: uppercase;
 }
+
+.navbar {
+    background-color: #73098dfd;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    color: ivory;
+}
+
+.navbar-nav a:hover {
+    color:rgb(232, 255, 248);
+}
+
+.nav-item a{
+    color: ivory;
+}
+
+#navbrand a {
+    color: ivory;
+}
