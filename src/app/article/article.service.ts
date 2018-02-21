@@ -29,4 +29,14 @@ export class ArticleService {
       .map((response: Response) => response.json());
   }
 
+  getArticlesByKeywords(formValue: string): Observable<Article[]> {
+    let apiRoute = this.apiUrl + '/find'
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+
+    console.log(JSON.stringify({ keywords: formValue['keywords']}));
+    return this.http.post(apiRoute, JSON.stringify({ keywords: formValue['keywords'] }), options)
+      .map((response: Response) => response.json());
+  }
+
 }

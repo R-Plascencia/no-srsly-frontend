@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '../article/article.service';
 import { Article } from '../article/article';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,13 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  getArticlesFromKeywords(form: NgForm) {
+    console.log(form.value);
+
+    this.articleService.getArticlesByKeywords(form.value)
+      .subscribe(result => this.results = result);
   }
 
 }
