@@ -9,13 +9,15 @@ import { SourceComponent } from './source/source.component';
 import { SourceService } from './source/source.service';
 import { HttpModule } from '@angular/http';
 import { ArticleService } from './article/article.service';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SourceComponent
+    SourceComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
