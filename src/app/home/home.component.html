@@ -7,7 +7,7 @@
             No, Srsly...
         </h1>
         <br><br>
-        <form #k="ngForm" name="keyword-form" (ngSubmit)="getArticlesFromKeywords(k)">
+        <form #k="ngForm" name="keyword-form" (ngSubmit)="toggleSpinner();getArticlesFromKeywords(k)">
           <div class="form-group">
             <div class="input-group input-group-lg">
               <input type="text" name="keywords" id="keywords" class="form-control" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Keywords (e.g: Trump, Midterms, FBI)" required ngModel>
@@ -27,7 +27,7 @@
       <b class="home-tip">ENTER SOME KEYWORDS AND GET SRS!</b>
     </div>
 
-    <div class="text-center" *ngIf="results.length === 0 && searched">
+    <div class="text-center" *ngIf="results.length === 0 && searched && !showSpinner">
       <div class="alert alert-warning" role="alert">
         <i class="fas fa-exclamation-circle"></i>
         <b class="home-tip">No results were found. Try some new keywords!</b>
@@ -40,7 +40,7 @@
     
     <ul class="list-unstyled">
       <li class="media" *ngFor="let article of results" id="keyword-result">
-        <img *ngIf="article?.top_img != null" class="mr-3" src="{{ article?.top_img }}" alt="Generic image" height="72" width="72">
+        <img *ngIf="article?.top_img != null" class="mr-3" src="{{ article?.top_img }}" alt="Image" height="72" width="72">
         <img *ngIf="article?.top_img === null" class="mr-3" src="../../assets/images/newspaper-def.jpg" alt="Replaced image" height="72" width="72">
 
         <div class="media-body">
