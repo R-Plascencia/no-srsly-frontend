@@ -7,7 +7,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class SourceService {
-  private apiUrl = 'http://api.lvh.me:3000/v1/sources'
+  // private apiUrl = 'http://api.lvh.me:3000/v1/sources'
+  private apiUrl = 'https://nosrsly-backend.herokuapp.com/api/v1/sources'
 
   constructor(
     private http: Http
