@@ -22,14 +22,13 @@ export class HomeComponent implements OnInit {
 
   getArticlesFromKeywords(form: NgForm) {
     console.log(form.value);
+    this.searched = true;
     
     this.articleService.getArticlesByKeywords(form.value)
       .subscribe(result => { 
         this.results = result
-        this.searched = true;
+        this.toggleSpinner();
       });
-    
-    this.toggleSpinner();
   }
 
   toggleSpinner() {

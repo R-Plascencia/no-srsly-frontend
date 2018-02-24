@@ -20,9 +20,9 @@ export class SourceComponent implements OnInit {
     this.sourceService.getAllSources().subscribe(sources => {
       this.sources = sources;
       this.currSource = this.sources[0];
+      
+      this.showSpinner = false;
     });
-
-    this.showSpinner = false;
   }
 
   showSource(id: number) {
