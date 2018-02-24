@@ -40,7 +40,7 @@
       FETCHING SOME SERIOUSNESS
     </div>
     
-    <ul class="list-unstyled">
+    <ul class="list-unstyled" *ngIf="!showSpinner">
       <li class="media" *ngFor="let article of results" id="keyword-result">
         <img *ngIf="article?.top_img != null" class="mr-3" src="{{ article?.top_img }}" alt="Image" height="72" width="72">
         <img *ngIf="article?.top_img === null" class="mr-3" src="../../assets/images/newspaper-def.jpg" alt="Replaced image" height="72" width="72">
