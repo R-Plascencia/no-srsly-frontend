@@ -11,17 +11,18 @@ export class SourceComponent implements OnInit {
   sources: Source[] = [];
   currSource: Source;
   currTab = 1;
+  initSpinner: boolean = false;
   showSpinner: boolean = false;
 
   constructor( private sourceService: SourceService ) { }
 
   ngOnInit() {
-    this.showSpinner = true;
+    this.initSpinner = true;
     this.sourceService.getAllSources().subscribe(sources => {
       this.sources = sources;
       this.currSource = this.sources[0];
       
-      this.showSpinner = false;
+      this.initSpinner = false;
     });
   }
 

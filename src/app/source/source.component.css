@@ -1,0 +1,16 @@
+#source-upper {
+    height: 50vh;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    background-image: url('../../assets/images/sources-newspaper.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+/* .shadowed { */
+    /* color: ivory; */
+    /* text-shadow: #000 0px 0px 25px; */
+    /* -webkit-font-smoothing: antialiased; */
+/* } */
+

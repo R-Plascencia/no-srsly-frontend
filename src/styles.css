@@ -11,7 +11,8 @@
 }
 
 .navbar {
-    background-color: #73098dfd;
+    /* background-color: #73098dfd; */
+    background-color: #600477fd;
     font-weight: 700;
     font-family: Montserrat, sans-serif;
     text-transform: uppercase;
@@ -31,4 +32,18 @@
 
 #navbrand a {
     color: ivory;
+}
+
+.shadowed {
+    color: ivory;
+    text-shadow: #000 0px 0px 10px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.outline {
+	text-shadow:
+		-1px -1px 0 rgb(0, 0, 0),
+		1px -1px 0 rgb(0, 0, 0),
+		-1px 1px 0 rgb(0, 0, 0),
+		1px 1px 0 rgb(0, 0, 0);
 }

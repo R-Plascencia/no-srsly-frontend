@@ -1,11 +1,11 @@
 <div class="container-fluid">
-  <div class="row align-items-end">
+  <div class="row align-items-end" id="source-upper">
     <div class="col">
       <div class="text-center">
-        <!-- <img src="../../assets/images/brain.jpg" height="100" width="100"> -->
-        <br><br>
-        <h1 class="display-2">
-            SRSLY by source
+        <h1 class="outline shadowed">
+          <b>
+            Where the srsness comes from
+          </b>
         </h1>
         <br><br>
       </div>
@@ -14,6 +14,10 @@
 </div>
 
 <div class="container">
+  <div class="text-center" *ngIf="initSpinner">
+    <i class="fas fa-circle-notch fa-spin fa-5x text-center"></i>
+  </div>
+
   <div class="row justify-content-start">
     <div class="col-4">
       <div class="list-group list-group-flush">
@@ -24,8 +28,10 @@
     </div>
 
     <div class="col-7">
-      <!-- <i class="fas fa-circle-notch fa-spin fa-5x text-center" *ngIf="showSpinner"></i> -->
-      <ul class="list-unstyled">
+      <div class="text-center" *ngIf="showSpinner">
+        <i class="fas fa-circle-notch fa-spin fa-5x text-center"></i>
+      </div>
+      <ul class="list-unstyled" *ngIf="!showSpinner">
         <li class="media" *ngFor="let s of currSource?.articles" style="margin-bottom:20px;">
           <img *ngIf="s?.top_img != null" class="mr-3" src="{{ s?.top_img }}" alt="Generic image" height="72" width="72">
           <img *ngIf="s?.top_img === null" class="mr-3" src="../../assets/images/newspaper-def.jpg" alt="Replaced image" height="72" width="72">

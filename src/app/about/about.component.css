@@ -1,3 +1,20 @@
 #about-content {
     margin-top: 35px;
 }
+
+#about-top {
+    height: 50vh;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    color: ivory;
+    background-image: url('../../assets/images/computer-news.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* .shadowed { */
+    /* color: ivory; */
+    /* text-shadow: #000 0px 0px 25px; */
+    /* -webkit-font-smoothing: antialiased; */
+/* } */
