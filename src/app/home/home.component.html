@@ -42,23 +42,28 @@
     </div>
     
     <ul class="list-unstyled" *ngIf="!showSpinner">
-      <li class="media" *ngFor="let article of results" id="keyword-result">
-        <img *ngIf="article?.top_img != null" class="mr-3" src="{{ article?.top_img }}" alt="Image" height="72" width="72">
-        <img *ngIf="article?.top_img === null" class="mr-3" src="../../assets/images/newspaper-def.jpg" alt="Replaced image" height="72" width="72">
+      <div class="card" *ngFor="let article of results" >
+        <div class="card-body">
+          <li class="media" id="keyword-result">
+            <img *ngIf="article?.top_img != null" class="mr-3" src="{{ article?.top_img }}" alt="Image" height="72" width="72">
+            <img *ngIf="article?.top_img === null" class="mr-3" src="../../assets/images/newspaper-def.jpg" alt="Replaced image" height="72" width="72">
 
-        <div class="media-body">
-          <h5 class="mt-0 mb-1">
-            <a href="{{ article?.url }}" target="_blank">
-              {{ article?.title }}
-            </a>
-          </h5>
-          {{ article?.summary }}
-          <small id="passwordHelpBlock" class="form-text text-muted">
-            {{ article?.pub_date | date }}
-          </small>
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">
+                <a href="{{ article?.url }}" target="_blank">
+                  {{ article?.title }}
+                </a>
+              </h5>
+              {{ article?.summary }}
+              <small id="passwordHelpBlock" class="form-text text-muted">
+                {{ article?.pub_date | date }}
+              </small>
+            </div>
+          </li>
         </div>
-      </li>
+      </div>
     </ul>
+    
   </div>
 
 </div>
