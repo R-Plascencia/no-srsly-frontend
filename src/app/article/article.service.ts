@@ -7,8 +7,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ArticleService {
-  // private apiUrl = 'http://api.lvh.me:3000/v1/articles'
-  private apiUrl = 'https://nosrsly-backend.herokuapp.com/api/v1/articles'
+  private apiUrl = 'http://lvh.me:3000/api/v1/articles'
+  // private apiUrl = 'https://nosrsly-backend.herokuapp.com/api/v1/articles'
 
   constructor(
     private http: Http
