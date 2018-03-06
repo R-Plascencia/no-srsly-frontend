@@ -55,10 +55,22 @@
                 </a>
               </h5>
               {{ article?.summary }}
-              <small id="passwordHelpBlock" class="form-text text-muted">
-                {{ article?.pub_date | date }}
-              </small>
+
+              <div class="d-flex justify-content-between">
+                <small id="passwordHelpBlock" class="form-text text-muted">
+                  {{ article?.pub_date | date }}
+                </small>
+
+                <div class="social-btns">
+                  <a href="javascript:void(0)" class="fab fa-facebook fa-2x"></a>
+                  <a href="javascript:void(0)" class="fab fa-twitter-square fa-2x"></a>
+                  <a href="javascript:void(0)" class="fas fa-envelope-square fa-2x"></a>
+                  <a href="javascript:void(0)" class="fas fa-link fa-2x"></a>
+                </div>
+              </div>
+              
             </div>
+
           </li>
         </div>
       </div>

@@ -85,9 +85,10 @@ SOCIAL MEDIA BUTTONS/ICONS
 }
 
 .social-btns {
-    display: none;
+    padding-right: 10%;
+    visibility: hidden;
 }
 
 .card:hover .social-btns {
-    display: block;
+    visibility: visible;
 }
