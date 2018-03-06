@@ -13,6 +13,8 @@ export class SourceComponent implements OnInit {
   currTab = 1;
   initSpinner: boolean = false;
   showSpinner: boolean = false;
+  showCopiedText: boolean = false;
+  copiedId: number = -1;
 
   constructor( private sourceService: SourceService ) { }
 
@@ -36,5 +38,15 @@ export class SourceComponent implements OnInit {
 
   setCurrTab(id: number) {
     this.currTab = id;
+  }
+
+  linkCopied(id: number) {
+    this.showCopiedText = true;
+    this.copiedId = id;
+
+    setTimeout(function(){
+      this.showCopiedText = false;
+      this.copiedId = -1;
+    }.bind(this), 2000);
   }
 }

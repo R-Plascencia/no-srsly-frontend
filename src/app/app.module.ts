@@ -10,6 +10,7 @@ import { SourceService } from './source/source.service';
 import { HttpModule } from '@angular/http';
 import { ArticleService } from './article/article.service';
 import { AboutComponent } from './about/about.component';
+import { ClipboardModule } from 'ngx-clipboard';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    ClipboardModule
   ],
   providers: [
     SourceService,

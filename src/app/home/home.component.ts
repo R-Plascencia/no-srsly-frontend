@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   results: Article[] = [];
   showSpinner: boolean = false;
   searched: boolean = false;
+  showCopiedText: boolean = false;
+  copiedId: number = -1;
 
   constructor(
     private articleService: ArticleService
@@ -33,6 +35,16 @@ export class HomeComponent implements OnInit {
 
   toggleSpinner() {
     this.showSpinner = !this.showSpinner;
+  }
+
+  linkCopied(id: number) {
+    this.showCopiedText = true;
+    this.copiedId = id;
+
+    setTimeout(function(){
+      this.showCopiedText = false;
+      this.copiedId = -1;
+    }.bind(this), 2000);
   }
 
 }

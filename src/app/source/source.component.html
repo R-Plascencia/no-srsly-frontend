@@ -52,11 +52,25 @@
                     </small>
                   </div>
                   <div class="col">
+                    <span style="color:green" *ngIf="copiedId === s?.id">
+                      <i class="fas fa-check"></i>
+                      Link Copied!
+                    </span>
+                  </div>
+                  <div class="col">
                     <div class="social-btns">
-                      <a href="javascript:void(0)" class="fab fa-facebook fa-2x"></a>
-                      <a href="javascript:void(0)" class="fab fa-twitter-square fa-2x"></a>
-                      <a href="javascript:void(0)" class="fas fa-envelope-square fa-2x"></a>
-                      <a href="javascript:void(0)" class="fas fa-link fa-2x"></a>
+                      <a href="https://www.facebook.com/sharer/sharer.php?u={{s?.url}}&amp;src=sdkpreparse" target="_blank">
+                        <i class="fab fa-facebook fa-2x"></i>
+                      </a>
+                      <a href="https://twitter.com/intent/tweet?text=Great article! SRSLY! {{s?.url}}" class="twitter-share-button" target="_blank">
+                        <i class="fab fa-twitter-square fa-2x"></i>
+                      </a>
+                      <a href="mailto:?subject=I wanted you to see this&amp;body=Check out this article! {{ s?.url }}">
+                        <i class="fas fa-envelope-square fa-2x"></i>
+                      </a>
+                      <a href="javascript:void(0)" ngxClipboard [cbContent]="s?.url" (cbOnSuccess)="linkCopied(s?.id)">
+                        <i class="fas fa-link fa-2x"></i>
+                      </a>
                     </div>
                   </div>
                 </div>

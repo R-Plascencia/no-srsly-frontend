@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+    text-decoration: none !important;
+}
+
 #upper-portion {
     height: 50vh;
     min-height: 50vh;
@@ -91,4 +95,8 @@ SOCIAL MEDIA BUTTONS/ICONS
 
 .card:hover .social-btns {
     visibility: visible;
+}
+
+.social-btns a:hover {
+    opacity: 0.65;
 }
