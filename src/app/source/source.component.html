@@ -45,9 +45,21 @@
                   </a> 
                 </h5>
                 {{ s?.summary }}
-                <small id="passwordHelpBlock" class="form-text text-muted">
-                  {{ s?.pub_date | date }}
-                </small>
+                <div class="row">
+                  <div class="col">
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                      {{ s?.pub_date | date }}
+                    </small>
+                  </div>
+                  <div class="col">
+                    <div class="social-btns">
+                      <a href="javascript:void(0)" class="fab fa-facebook fa-2x"></a>
+                      <a href="javascript:void(0)" class="fab fa-twitter-square fa-2x"></a>
+                      <a href="javascript:void(0)" class="fas fa-envelope-square fa-2x"></a>
+                      <a href="javascript:void(0)" class="fas fa-link fa-2x"></a>
+                    </div>
+                  </div>
+                </div>
               </div>
 
             </li>

@@ -58,3 +58,36 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transform: scale(1.009, 1.009);
 }
+
+/*
+--------------------------
+SOCIAL MEDIA BUTTONS/ICONS
+--------------------------
+*/
+
+.fa-facebook {
+    /* background: #3B5998; */
+    color: #3B5998;
+}
+
+.fa-twitter-square {
+    /* background: #55ACEE; */
+    color: #55ACEE;
+}
+
+.fa-envelope-square {
+    color: rgb(109, 109, 109);
+}
+
+.fa-link {
+    color: #bc10e7fd;
+    height: 30px;
+}
+
+.social-btns {
+    display: none;
+}
+
+.card:hover .social-btns {
+    display: block;
+}
