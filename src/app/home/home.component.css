@@ -20,3 +20,43 @@
     color: rgb(88, 88, 88);
 }
 
+.landing-hero {
+    height: 100vh;
+    background-image: url('../../assets/images/man-coffee-cup-pen.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* .overlay {
+    position: relative;
+    background: rgba(102, 0, 116, 0.377);
+} */
+
+.overlay:before{
+    position: absolute;
+    content:" ";
+    /* top:0; */
+    left:0;
+    width:100%;
+    height:100%;
+    display: block;
+    z-index:0;
+    background-color: rgba(121, 6, 136, 0.20);
+}
+
+.landing-hero * {
+    position: relative;
+    /* hack */
+}
+
+.container#hero-content {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+    color: ivory;
+}
+
+
+

@@ -100,3 +100,7 @@ SOCIAL MEDIA BUTTONS/ICONS
 .social-btns a:hover {
     opacity: 0.65;
 }
+
+.uppercase-text{
+    text-transform: uppercase;
+}

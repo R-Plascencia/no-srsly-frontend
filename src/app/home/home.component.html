@@ -1,3 +1,20 @@
+<div class="container-fluid landing-hero overlay">
+  <div class="container shadowed" id="hero-content">
+    <div class="uppercase-text">
+      <b>
+        <h1 class="display-4">
+          Get the truth. SRSLY.
+        </h1>
+      </b>
+      <div class="text-center">
+        <button type="button" class="btn btn-info btn-lg btn-block" onClick="document.getElementById('upper-portion').scrollIntoView();">
+          <i class="fas fa-chevron-down"></i> Get Started
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container-fluid" id="upper-portion">
   <div class="row align-items-end">
     <div class="col">
@@ -11,7 +28,7 @@
         <form #k="ngForm" name="keyword-form" (ngSubmit)="toggleSpinner();getArticlesFromKeywords(k)">
           <div class="form-group">
             <div class="input-group input-group-lg">
-              <input type="text" name="keywords" id="keywords" class="form-control" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Keywords (e.g: Trump, Midterms, FBI)" autofocus required ngModel>
+              <input type="text" name="keywords" id="keywords" class="form-control" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Keywords (e.g: Trump, Midterms, FBI)" required ngModel>
             </div>
           </div>
         </form>
@@ -72,7 +89,7 @@
                   <a href="https://www.facebook.com/sharer/sharer.php?u={{article?.url}}&amp;src=sdkpreparse" target="_blank">
                     <i class="fab fa-facebook fa-2x"></i>
                   </a>
-                  <a href="https://twitter.com/intent/tweet?text=Great article! SRSLY! {{article?.url}}" class="twitter-share-button" target="_blank">
+                  <a href="https://twitter.com/intent/tweet?text=Great article! SRSLY! '{{article?.title}}' {{article?.url}}" class="twitter-share-button" target="_blank">
                     <i class="fab fa-twitter-square fa-2x"></i>
                   </a>
                   <a href="mailto:?subject=I wanted you to see this&amp;body=Check out this article! {{ article?.url }}">
@@ -113,4 +130,13 @@
   
     return t;
   }(document, "script", "twitter-wjs"));
+</script>
+<script>
+  $('a[href*="#"]').on('click', function (e) {
+	e.preventDefault();
+
+	$('html, body').animate({
+		scrollTop: $($(this).attr('href')).offset().top
+	}, 500, 'linear');
+});
 </script>
